@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Barcode Scanner
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button expand="full" (click)="scanBarcode()">Barcode scannen</ion-button>
+  
+  <ion-list *ngIf="scannedBarcodes.length > 0">
+    <ion-item *ngFor="let barcode of scannedBarcodes">
+      <ion-label>{{ barcode }}</ion-label>
+    </ion-item>
+  </ion-list>
+  
+  <ion-card *ngIf="showCamera">
+    <ion-card-content>
+      <h2>Live-Ansicht der Kamera</h2>
+      <img [src]="cameraImage" />
+    </ion-card-content>
+  </ion-card>
+</ion-content>

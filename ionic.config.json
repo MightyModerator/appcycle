@@ -1,0 +1,7 @@
+{
+  "name": "appcycle",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
